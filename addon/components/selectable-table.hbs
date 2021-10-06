@@ -24,6 +24,7 @@
         <tr class={{if (includes index this.itemsSelected) "active-row"}}>
           <td>
             <Input
+              data-test-checkbox
               id="{{index}}-checkbox"
               @type="checkbox"
               @checked={{includes index this.itemsSelected}}
