@@ -1,0 +1,33 @@
+<div>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th></th>
+        {{#each this.tableTitles as | title |}}
+          <th scope="col">{{title}}</th>
+        {{/each}}
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each @model as | object index |}}
+        <tr>
+          <td>
+            <Input
+              id="{{index}}-checkbox"
+              @type="checkbox"
+            />
+          </td>
+
+          {{#each (entries object) as | entry |}}
+            <td>{{get entry 1}}</td>
+          {{/each}}
+        </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+
+</div>
