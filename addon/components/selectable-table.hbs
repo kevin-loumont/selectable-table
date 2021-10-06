@@ -18,6 +18,7 @@
             <Input
               id="{{index}}-checkbox"
               @type="checkbox"
+              @disabled={{not-eq (object-pick object "status") "available"}}
             />
           </td>
 
