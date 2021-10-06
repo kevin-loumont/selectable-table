@@ -26,6 +26,10 @@
   border-bottom: 2px solid lightgray;
 }
 
+.selectable-table tbody tr.active-row {
+  background-color: lightgray;
+}
+
 .selectable-table tbody tr:hover td {
   background-color: lightgray;
 }

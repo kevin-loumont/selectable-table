@@ -13,12 +13,13 @@
 
     <tbody>
       {{#each @model as | object index |}}
-        <tr>
+        <tr class={{if (includes index this.itemsSelected) "active-row"}}>
           <td>
             <Input
               id="{{index}}-checkbox"
               @type="checkbox"
               @disabled={{not-eq (object-pick object "status") "available"}}
+              {{on "input"  (fn this.onClickCheckbox index)}}
             />
           </td>
 
