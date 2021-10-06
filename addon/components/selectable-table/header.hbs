@@ -1,0 +1,17 @@
+<div>
+
+  <Input
+    id="selectAll-checkbox"
+    @type="checkbox"
+    @checked={{@isAllSelected}}
+    @indeterminate={{@isIndeterminate}}
+    {{on "input" @selectAllItems}}
+  />
+
+  {{#if (eq @nbItemSelected 0)}}
+    None Selected
+  {{else}}
+    Selected {{@nbItemSelected}}
+  {{/if}}
+
+</div>

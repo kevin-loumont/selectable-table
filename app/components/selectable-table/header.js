@@ -1,0 +1,1 @@
+export { default } from 'selectable-table/components/selectable-table/header';
