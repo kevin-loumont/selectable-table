@@ -22,7 +22,11 @@
           </td>
 
           {{#each (entries object) as | entry |}}
-            <td>{{get entry 1}}</td>
+            {{#if (eq (get entry 0) "status")}}
+              <SelectableTable::Status @model={{get entry 1}}/>
+            {{else}}
+              <td>{{get entry 1}}</td>
+            {{/if}}
           {{/each}}
         </tr>
       {{/each}}

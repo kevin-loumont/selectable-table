@@ -1,0 +1,5 @@
+{{#if (eq @model "available")}}
+  <td><span class="green-badge" data-test-badge></span> {{capitalize @model}}</td>
+{{else}}
+  <td>{{capitalize @model}}</td>
+{{/if}}

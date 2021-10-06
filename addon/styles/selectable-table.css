@@ -29,3 +29,11 @@
 .selectable-table tbody tr:hover td {
   background-color: lightgray;
 }
+
+.green-badge {
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block
+}
