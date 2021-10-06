@@ -1,5 +1,6 @@
-<div>
+<div class='wrapper'>
 
+<div>
   <Input
     id="selectAll-checkbox"
     @type="checkbox"
@@ -7,11 +8,24 @@
     @indeterminate={{@isIndeterminate}}
     {{on "input" @selectAllItems}}
   />
+</div>
 
+<div class="wrapper_text">
   {{#if (eq @nbItemSelected 0)}}
     None Selected
   {{else}}
     Selected {{@nbItemSelected}}
   {{/if}}
+</div>
+
+<div>
+  <button
+    type="button"
+    class="button"
+    {{on "click" @displayAlert}}
+  >
+    Download Selected
+  </button>
+</div>
 
 </div>

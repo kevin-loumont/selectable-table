@@ -57,4 +57,13 @@ export default class SelectableTable extends Component {
       this.isAllSelected = true
     }
   }
+
+  @action
+  displayAlert() {
+    let text = ''
+    this.itemsSelected.forEach( (value)  => {
+      text += `${this.args.model[value].device}:\n ${this.args.model[value].path}\n\n`
+    })
+    alert(text)
+  }
 }

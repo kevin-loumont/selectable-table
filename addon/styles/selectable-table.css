@@ -41,3 +41,23 @@
   border-radius: 50%;
   display: inline-block
 }
+
+.button {
+  border-radius: 50px;
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.wrapper {
+  display: flex;
+  line-height: 40px;
+}
+
+.wrapper_text {
+  min-width: 120px
+}
